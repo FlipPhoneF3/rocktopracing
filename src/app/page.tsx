@@ -10,9 +10,9 @@ function HeroSection() {
   return (
     <section className="relative h-[60vh] w-full">
       <Image
-        src="https://picsum.photos/1920/1080"
+        src="https://picsum.photos/1920/1280"
         alt="A trail runner on a mountain ridge"
-        data-ai-hint="trail running"
+        data-ai-hint="trail running scenic"
         fill
         className="object-cover"
         priority
