@@ -15,7 +15,7 @@ export function Header() {
       <div className="container flex h-16 max-w-screen-2xl items-center">
         <div className="mr-4 flex items-center">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/logo.png" alt="Rock Top Racing" width={150} height={50} />
+            <Image src="/logo.png" alt="Rock Top Racing" width={150} height={50} className="dark:invert" />
           </Link>
         </div>
         <nav className="hidden flex-1 items-center justify-center space-x-6 text-sm font-medium md:flex">
