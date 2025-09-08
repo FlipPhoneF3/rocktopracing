@@ -1,6 +1,6 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState, useFormStatus } from 'react';
 import { useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { registerForRace } from '@/app/actions';
@@ -21,7 +21,7 @@ function SubmitButton() {
 
 export default function RegisterPage() {
   const { toast } = useToast();
-  const [state, formAction] = useFormState(registerForRace, initialState);
+  const [state, formAction] = useActionState(registerForRace, initialState);
 
   useEffect(() => {
     if (!state.message) return;

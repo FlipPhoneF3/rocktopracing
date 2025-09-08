@@ -10,7 +10,7 @@ function HeroSection() {
   return (
     <section className="relative h-[60vh] w-full">
       <Image
-        src="https://picsum.photos/1920/1280"
+        src="/hero.png"
         alt="A trail runner on a mountain ridge"
         data-ai-hint="trail running scenic"
         fill
@@ -71,7 +71,6 @@ function RaceCard({ event }: { event: RaceEvent }) {
         </div>
       </CardHeader>
       <CardContent className="flex-grow p-6 space-y-4">
-        <Badge variant="outline" className="capitalize">{event.difficulty}</Badge>
         <CardTitle className="font-headline text-2xl">{event.name}</CardTitle>
         <div className="text-muted-foreground space-y-2">
             <div className="flex items-center gap-2">

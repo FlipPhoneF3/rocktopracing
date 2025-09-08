@@ -14,7 +14,7 @@ export type RaceEvent = {
 export const upcomingEvents: RaceEvent[] = [
   {
     id: 'granite-grinder-2024',
-    name: 'The Granite Grinder',
+    name: 'Waxhaw Trail Fest',
     date: 'October 26, 2024',
     location: 'Stone Mountain, NC',
     distance: '15k & 30k',
@@ -26,7 +26,7 @@ export const upcomingEvents: RaceEvent[] = [
   },
   {
     id: 'ridge-runner-ramble-2024',
-    name: 'Ridge Runner Ramble',
+    name: 'Inferno',
     date: 'November 9, 2024',
     location: 'Asheville, NC',
     distance: '10k & Half Marathon',
@@ -38,7 +38,7 @@ export const upcomingEvents: RaceEvent[] = [
   },
   {
     id: 'creekside-crawl-2025',
-    name: 'Creekside Crawl',
+    name: 'Terror Trails',
     date: 'April 12, 2025',
     location: 'Pisgah National Forest, NC',
     distance: '5k Fun Run & 10k',
