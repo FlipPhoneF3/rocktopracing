@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mountain } from 'lucide-react';
+import Image from 'next/image';
 
 export function Footer() {
   return (
@@ -7,8 +7,9 @@ export function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div className="flex items-center gap-2">
-            <Mountain className="h-6 w-6 text-primary" />
-            <span className="font-headline text-xl font-bold text-primary">Rock Top Racing</span>
+            <Link href="/" className="flex items-center gap-2">
+                <Image src="/logo.png" alt="Rock Top Racing" width={150} height={50} className="dark:invert"/>
+            </Link>
           </div>
           <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Rock Top Racing. All rights reserved.</p>
           <nav className="flex gap-4">
