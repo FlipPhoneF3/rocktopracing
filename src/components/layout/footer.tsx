@@ -7,7 +7,7 @@ export function Footer() {
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center gap-2">
-                <img src="/logo.png" alt="Rock Top Racing" style={{ height: '50px', width: '150px' }} />
+                <img src="/logo.png" alt="Rock Top Racing" style={{ height: '40px', width: 'auto' }} />
             </Link>
           </div>
           <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Rock Top Racing. All rights reserved.</p>
