@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 export function Footer() {
   return (
@@ -8,7 +7,7 @@ export function Footer() {
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center gap-2">
-                <Image src="/logo.png" alt="Rock Top Racing" width={150} height={50} className="dark:invert"/>
+                <img src="/logo.png" alt="Rock Top Racing" style={{ height: '50px', width: '150px' }} />
             </Link>
           </div>
           <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Rock Top Racing. All rights reserved.</p>
