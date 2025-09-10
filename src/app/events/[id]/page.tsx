@@ -7,6 +7,12 @@ import { Badge } from '@/components/ui/badge';
 import { Calendar, MapPin, Flag, Mountain, Gauge } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
+export async function generateStaticParams() {
+  return upcomingEvents.map((event) => ({
+    id: event.id,
+  }));
+}
+
 export default function EventDetailsPage({ params }: { params: { id: string } }) {
   const event = upcomingEvents.find((e) => e.id === params.id);
 
