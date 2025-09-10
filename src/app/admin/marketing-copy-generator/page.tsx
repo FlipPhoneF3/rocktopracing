@@ -4,7 +4,25 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { generateMarketingCopy } from '@/app/actions';
+// Mock function for static export - AI features not available
+const generateMarketingCopy = async (data: any) => {
+  // Simulate AI processing delay
+  await new Promise(resolve => setTimeout(resolve, 2000));
+  
+  // Generate mock marketing copy based on input
+  const mockCopy = `Get ready for an unforgettable adventure at ${data.raceName}! 
+
+Located in the stunning ${data.location}, this ${data.difficulty.toLowerCase()} ${data.raceDistance} race offers runners the perfect blend of challenge and natural beauty. The ${data.terrain} terrain will test your endurance while providing breathtaking views that make every step worth it.
+
+Whether you're a seasoned trail runner or looking to tackle your first off-road challenge, ${data.raceName} promises an experience you'll never forget. Join fellow adventurers as you navigate through nature's playground and discover what you're truly capable of.
+
+Don't miss your chance to be part of this incredible journey. Register now and prepare to push your limits in one of the most beautiful racing environments around!`;
+
+  return {
+    success: true,
+    data: { marketingCopy: mockCopy }
+  };
+};
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
