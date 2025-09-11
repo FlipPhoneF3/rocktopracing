@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 
 export function Header() {
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/#events', label: 'Events' },
     { href: '/results', label: 'Results' },
     { href: '/contact', label: 'Contact' },
   ];
@@ -23,6 +23,22 @@ export function Header() {
               {item.label}
             </Link>
           ))}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-foreground/80 transition-colors hover:text-foreground">
+              Events
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <Link href="/events/granite-grinder-2024">
+                <DropdownMenuItem>Waxhaw Trail Fest</DropdownMenuItem>
+              </Link>
+              <Link href="/events/ridge-runner-ramble-2024">
+                <DropdownMenuItem>Inferno</DropdownMenuItem>
+              </Link>
+              <Link href="/events/creekside-crawl-2025">
+                <DropdownMenuItem>Terror Trails</DropdownMenuItem>
+              </Link>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </nav>
         <div className="flex flex-1 items-center justify-end gap-2">
             <Link href="/register" passHref>

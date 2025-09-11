@@ -46,6 +46,22 @@ export default function EventDetailsPage({ params }: { params: { id: string } })
                 <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">Register for this Race</Button>
               </Link>
             </div>
+
+            <h2 className="font-headline text-3xl mb-4 text-primary">Event Photos</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+              {[1,2,3,4,5,6].map((n) => (
+                <div key={n} className="relative w-full aspect-[4/3] overflow-hidden rounded-lg border">
+                  <Image
+                    src={`https://picsum.photos/seed/trail-${event.id}-${n}/800/600`}
+                    alt={`${event.name} photo ${n}`}
+                    fill
+                    className="object-cover"
+                    data-ai-hint="trail running photo"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                  />
+                </div>
+              ))}
+            </div>
             
             <h2 className="font-headline text-3xl mb-4 text-primary">Course Map</h2>
             <div className="relative w-full aspect-video rounded-lg overflow-hidden border-2 shadow-md">
