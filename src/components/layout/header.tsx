@@ -1,6 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { MobileNav } from '@/components/layout/mobile-nav';
 
 export function Header() {
   const navItems = [
@@ -13,6 +16,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-24 max-w-screen-2xl items-center">
         <div className="mr-4 flex items-center">
+          <MobileNav />
           <Link href="/" className="flex items-center gap-2">
             <img src="/logo.png" alt="Rock Top Racing" style={{ height: '80px', width: 'auto' }} />
           </Link>
